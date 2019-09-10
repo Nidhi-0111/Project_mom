@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Employee Dashboard</title>
+
+    <!-- Font Icon -->
+    
+    <!-- Main css -->
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link media="all" type="text/css" rel="stylesheet" href="https://bootsnipp.com/css/fullscreen.css">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function validate(){
+var alertText="";
+var f=theform.ch.value;  
+var r=theform.ch.value; 
+var s=theform.ch.value;
+var fn=document.getElementById("firstname").value;
+var ln=theform.lastname.value;
+var m=theform.email.value;
+var co=theform.country.value;
+var ag=theform.age.value;
+var ad=theform.address.value; 
+if(fn===""){alertText=alertText+"1-please enter firstname\n";}    
+if(ln===""){alertText+="2-please enter lastname\n";}    
+if(m===""){alertText+="3-please enter email\n";}    
+if(ag===""){alertText+=" 4-please enter Age\n";}       
+if(ad===""){alertText+="5- please enter adress\n";}    
+if(co===""){alertText+="6-please enter country\n";}    
+if(isNaN(ag)){ window.alert(" The Age NOT Number");}
+var group = theform.ch;
+for (var i=0; i<group.length; i++) {
+if (group[i].checked)
+break;
+}
+if (i==group.length){
+alertText+="7-please enter interests\n";
+}
+
+if(alertText!=="") {window.alert(alertText);}
+if(m.indexOf('@')==-1 && m.indexOf('\.')==-1) window.alert("The Email without the @ and dot");
+}//end function
+</script>
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+    .width30 {
+		width: 30%;
+	}
+	.width70 {
+		width: 70%;	
+	}
+	.floatL{
+		float: left;
+	}
+	.width50{
+		width: 50%;
+	}
+	.floatR{
+		float: right;
+	}
+	.btn{
+		width: 100%;
+		border-radius: 0px;
+	}
+	.width100{
+		width: 100%;
+	}
+	.row{
+
+		margin-left: -20px;
+		margin-right: -20px;
+
+	}
+	.boxStyle{
+		padding: 20px; 
+		border-radius: 25px; 
+		border-top: 6px solid #283048;
+		border-bottom: 6px solid #859398;
+	}
+	.bg-dark{
+		background: linear-gradient( #283048, #859398)
+	}
+	
+</style>
+</head>
+
+
+<body class="bg-dark">
+	<br>
+		<h3 class="text-light" style="text-align: center;">CREATE EMPLOYEES</h3>
+	<br>
+	<div class="container bg-dark">
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-2"></div>		
+		<div class="col-sm-6 bg-light boxStyle">
+			<form name="theform" action="" onSubmit="validate()" >
+	<div class="form-group"> 
+		<div class="width30 floatL"><label>Firstname</label></div>
+		<div class="width70 floatR"><input id="firstname" class="width100 form-control" name="firstname" type="text" value="" size="20" autofocus></div><br>
+	</div><br>
+	
+	<div class="form-group">
+		<div class="width30 floatL"><label>Email</label></div>
+		<div class="width70 floatR"><input class="width100 form-control" name="email"  src=""   type="text" value="" size="20"></div>
+	</div><br></br>
+	
+ 	 	<div class="form-group">
+ 		<div class="width30 floatL"><label>Password</label></div>
+ 		<div class="width70 floatR"><input class="width100 form-control" name="password" size="20" type="password"></div>
+ 	</div><br></br>
+ 	 	<div class="form-group">
+ 		<div class="width30 floatL"><label>R-Password</label></div>
+ 		<div class="width70 floatR"><input class="width100 form-control" name="password2" type="password" size="20"></div>
+	 </div><br></br>
+	 
+	 <div class="form-group">
+		<div class="width30 floatL"><label>Designation</label></div>
+		<div class="width70 floatR"><input id="designation" class="width100 form-control" name="designation" type="text" value="" size="20"></div><br>
+	</div><br>
+ 	 	<div class="form-group">
+		 <div class="width30 floatL"><label>Department ID:</label></div>
+		 <div class="width70 floatR"><input id="designation" class="width100 form-control" type="integer" value="" size="20" 
+			 name="dept_id" required></div><br>
+		  </div><br>
+		  
+		  <div class="form-group">
+			<div class="width30 floatL"><label>Hire Date:</label></div>
+			<div class="width70 floatR"><input id="hdate" class="width100 form-control" type="date" value="" size="20" 
+				name="hire_date" required></div><br>
+			 </div><br>
+
+			 
+			 <div class="form-group">
+				<div class="row">
+			  <div class="width50"><input class="btn btn-dark" type="submit"   value="Submit" style="font-weight: bold"></div>
+			  
+			   <div class="width50"><input class="btn btn-secondary" type="reset" style="font-weight: bold"></div>		
+				</div>
+				</div>
+	
+    
+  	</div></div><br><br><br>
+
+ 
+     </form>      
+		<!-- </div>
+		<div class="col-sm-1"></div>
+		<div class="col-sm-2"></div>
+	</div> 
+	</div> 
+	      -->
+</body>
+
+</html>

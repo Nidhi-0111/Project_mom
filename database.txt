@@ -1,0 +1,16 @@
+create table mom (mom_id number primary key, creator_id number, purpose varchar2(100), subject varchar2(100),start_dt varchar2(100),
+end_dt varchar2(100),points varchar2(200), decision varchar2(100));
+
+
+create table action(action_id number primary key, action_name varchar2(20),
+emp_id number, foreign key (emp_id) references Employees(emp_id), 
+status varchar2(20), mom_id number,foreign key
+(mom_id) references mom(mom_id), open_date timestamp(6), assign_date varchar2(50), 
+wip_date varchar2(50), rfc_date varchar2(50), remarks varchar2(100),
+ end_date varchar2(50), expected_date varchar2(50),
+completed_date varchar2(50));
+
+
+
+ create table participants (emp_id number, foreign key(emp_id) references Employees(emp_id),
+ mom_id number, foreign key(mom_id) references mom(mom_id), attendance varchar2(20));
